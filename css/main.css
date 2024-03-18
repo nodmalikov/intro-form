@@ -76,6 +76,11 @@ img {
     height: auto;
 }
 
+*:focus {
+    outline: 2px dotted var(--purple-color);
+    outline-offset: 2px;
+}
+
 /* CONTAINER */
 .container {
     width: 100%;
@@ -94,18 +99,27 @@ img {
 }
 
 
+/* INTRO-PAGEK */
+.intro-page {
+    display: flex;
+}
+
 /* INTRO-HERO */
 .intro-hero {
-    width: 570px;
+    width: 100%;
+    max-width: 570px;
     border-radius: 20px;
     overflow: hidden;
     color: #fff;
+    display: flex;
+    flex-direction: column;
     background-color: #222;
     background-image: url("../img/bg-img.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
+
 .intro-hero-main {
     padding: 55px 60px;
     display: flex;
@@ -122,7 +136,6 @@ img {
     font-weight: 500;
     font-size: 14px;
     line-height: normal;
-    display: inline-block;
 }
 
 .intro-hero-heading {
@@ -143,4 +156,72 @@ img {
     font-size: 19px;
     text-align: center;
     background-color: var(--green-color);
+}
+
+/* SIGNUP-FORM */
+.signup-form {
+    width: 100%;
+    max-width: 570px;
+    padding: 55px 60px 40px;
+    margin-left: 12px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.signup-form-heading {
+    margin-top: 0;
+    margin-bottom: 65px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--text-color);
+}
+
+.signup-form-fields {
+    margin-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form-field {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    border: 0;
+    border-bottom: 1px solid var(--input-color);
+    color: var(--input-color);
+}
+
+.signup-form-field:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.signup-form-field:focus {
+    border-bottom-color: var(--text-color);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.signup-form-button {
+    width: 100%;
+    border: 0;
+    padding: 20px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--purple-color);
+}
+
+.signup-form-notice {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.singup-form-link {
+    color: var(--danger-color);
 }
